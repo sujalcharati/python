@@ -1,5 +1,6 @@
 def adi_mat(edges):
     vertices = max(max(u, v) for u, v in edges) + 1
+    
     adj_matrix = [[0] * vertices for _ in range(vertices)]
     for u, v in edges:
         adj_matrix[u][v] = 1
@@ -12,4 +13,4 @@ edges = [(0, 1), (0, 2), (1, 3), (1, 4), (2, 5), (2, 6),
 adj_matrix = adi_mat(edges)
 print("Adjacency Matrix:")
 for row in adj_matrix:
-    print(row)
+    print(row)  
