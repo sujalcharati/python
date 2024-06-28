@@ -1,7 +1,8 @@
+# how to convert the given edges to form graph in adjacency matrix
 def adi_mat(edges):
-    vertices = max(max(u, v) for u, v in edges) + 1
+    vertices = max(max(u, v) for u, v in edges) + 1# no of nodes
     
-    adj_matrix = [[0] * vertices for _ in range(vertices)]
+    adj_matrix = [[0] * vertices for _ in range(vertices)]#2d array
     for u, v in edges:
         adj_matrix[u][v] = 1
         adj_matrix[v][u] = 1
