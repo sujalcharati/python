@@ -9,9 +9,9 @@ def dijkstra(edges, vertices, source):
         for i in range(vertices):
             if not visited[i] and (u == -1 or distances[i] < distances[u]):
                 u = i
-        visited[u] = True
+        visited[u] = True #visited
         for edge in edges:
-            if edge[0] == u:
+            if edge[0] == u:# initialising (u,v,w) analogy to edges
                 v = edge[1]
                 weight = edge[2]
                 if distances[u] + weight < distances[v]:
@@ -26,4 +26,4 @@ def dijkstra(edges, vertices, source):
 edges = [(0, 1, 4), (0, 2, 5), (1, 3, 8), (1, 4, 6), (2, 5, 3), (2, 6, 7), (3, 7, 5), (4, 8, 4), (5, 8, 6), (7, 9, 8), (8, 9, 3), (6, 10, 5),(7, 11, 7), (8, 10, 5)]
 vertices = 12
 source = 0
-dijkstra(edges, vertices, source)
+dijkstra(edges, vertices, source)# function call
