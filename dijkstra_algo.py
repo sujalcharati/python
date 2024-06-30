@@ -1,8 +1,8 @@
 # dijikstra
 def dijkstra(edges, vertices, source):
     distances = [float('inf')] * vertices
-    visited = [False] * vertices
-    parent = [0] * vertices
+    visited = [False] * vertices# storing the  update of  visiting the node  or not
+    parent = [0] * vertices# to store the shortest path
     distances[source] = 0
     for v in range(vertices):
         u = -1
@@ -14,7 +14,7 @@ def dijkstra(edges, vertices, source):
             if edge[0] == u:# initialising (u,v,w) analogy to edges
                 v = edge[1]
                 weight = edge[2]
-                if distances[u] + weight < distances[v]:
+                if distances[u] + weight < distances[v]:#main formula
                     distances[v] = distances[u] + weight
                     parent[v] = u
     print("Vertex   Distance from Source")
