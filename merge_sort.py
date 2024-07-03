@@ -1,10 +1,10 @@
 def merge_sort(arr1,arr2):
-    i=0
+    i=0 #indices
     j=0
     arr3=[]
     while i< len(arr1) and j < len(arr2):
           if arr1[i]< arr2[j]:
-             arr3[i]= arr1[i]
+             arr3[i]= arr1[i]# initialization
              i+=1
           else:
              arr3[i]= arr2[j]
@@ -20,7 +20,7 @@ def merge_fxn(arr3):
         return arr3
     mid= len(arr3)//2
     arr1,arr2 =None,None
-    arr1 = merge_fxn(arr3[:mid])
+    arr1 = merge_fxn(arr3[:mid])# function call
     arr2 = merge_fxn(arr3[mid:])
     return merge_sort(arr1,arr2)
 arr3=[1,2,3,4,5,6,7,8,9,10]
