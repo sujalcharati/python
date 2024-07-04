@@ -20,7 +20,7 @@ def merge_fxn(arr3):
         return arr3
     mid= len(arr3)//2
     arr1,arr2 =None,None
-    arr1 = merge_fxn(arr3[:mid])# function call
+    arr1 = merge_fxn(arr3[:mid])
     arr2 = merge_fxn(arr3[mid:])
     return merge_sort(arr1,arr2)
 arr3=[1,2,3,4,5,6,7,8,9,10]
