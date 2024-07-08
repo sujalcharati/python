@@ -1,3 +1,4 @@
+#here the maxheapify denotes that the parent node should be always greater than the or equal to the child node ,otherwise it swaps the element and terminates the tree of root node being highest node
 arr = [12, 11, 13, 5, 6, 7]
 def maxHeapify(arr, i):
   largest = i
